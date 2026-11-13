@@ -1,0 +1,16 @@
+{
+  "01_datos/raw/Calendario.csv": "4913b68e64b985db547bf5fe53a41ac2a260674d0f574ddc1d000e4253b7ef95",
+  "01_datos/raw/Categorias.csv": "8fb377c15ae5107db7e7161ed883c2c984a60da73e956067ebd2dc433dbec8db",
+  "01_datos/raw/Clientes.csv": "4900c962d6a070ae203c5d5fa2572dab8206c40294cb6e8c14a008d8b31390f8",
+  "01_datos/raw/DetalleVentas.csv": "94970aa0f90262c2a5a6b3fc5078073fa3b67f2af29935b88131e06758f08edb",
+  "01_datos/raw/Pedidos.csv": "2a25403e97e9134cd2a592bd62f73e3d405d5d586ba6f81580269325a27992df",
+  "01_datos/raw/Productos.csv": "8d6445bda9a151f59ffb090599a2e9899abc40fee4e1425554248d3997610341",
+  "01_datos/raw/Tiendas.csv": "c19389c13c0adb92c8018a3bda395cb86953c391d6fb8641368770b3d933e4f8",
+  "01_datos/raw/Vendedores.csv": "67563ea518587a9512ec22b200ca4abc138d40b67698268a8ae01823e7efa92a",
+  "01_datos/star/DimCliente.csv": "9d03975452fb2be587af1269271c3b65c2fa24d77997f04c7b799f6f66e983d9",
+  "01_datos/star/DimFecha.csv": "4913b68e64b985db547bf5fe53a41ac2a260674d0f574ddc1d000e4253b7ef95",
+  "01_datos/star/DimProducto.csv": "ac28213abae4f9b60054979eb3d8acb978de60781f4f4909435c8cd0f00094f0",
+  "01_datos/star/DimTienda.csv": "c19389c13c0adb92c8018a3bda395cb86953c391d6fb8641368770b3d933e4f8",
+  "01_datos/star/DimVendedor.csv": "67563ea518587a9512ec22b200ca4abc138d40b67698268a8ae01823e7efa92a",
+  "01_datos/star/FactVentas.csv": "6cac979463133638357b569d35b2cc6a8d6c8a6a5996434e6d7f6ecf6f8d42fa"
+}

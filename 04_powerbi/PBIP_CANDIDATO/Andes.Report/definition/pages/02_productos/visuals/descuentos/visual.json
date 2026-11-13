@@ -1,0 +1,102 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "descuentos",
+  "position": {
+    "x": 738,
+    "y": 500,
+    "z": 23,
+    "width": 678,
+    "height": 365,
+    "tabOrder": 23
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimProducto"
+                    }
+                  },
+                  "Property": "Categoria"
+                }
+              },
+              "queryRef": "DimProducto.Categoria",
+              "nativeQueryRef": "Categoria"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactVentas"
+                    }
+                  },
+                  "Property": "Descuento total"
+                }
+              },
+              "queryRef": "FactVentas.Descuento total",
+              "nativeQueryRef": "Descuento total"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactVentas"
+                    }
+                  },
+                  "Property": "Descuento ponderado"
+                }
+              },
+              "queryRef": "FactVentas.Descuento ponderado",
+              "nativeQueryRef": "Descuento ponderado"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactVentas"
+                    }
+                  },
+                  "Property": "Margen bruto porcentual"
+                }
+              },
+              "queryRef": "FactVentas.Margen bruto porcentual",
+              "nativeQueryRef": "Margen bruto porcentual"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Descuento y margen por categoría'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

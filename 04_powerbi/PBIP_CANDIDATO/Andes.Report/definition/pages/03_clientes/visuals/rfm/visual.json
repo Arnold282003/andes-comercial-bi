@@ -1,0 +1,78 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "rfm",
+  "position": {
+    "x": 24,
+    "y": 260,
+    "z": 27,
+    "width": 600,
+    "height": 260,
+    "tabOrder": 27
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimCliente"
+                    }
+                  },
+                  "Property": "SegmentoRFM"
+                }
+              },
+              "queryRef": "DimCliente.SegmentoRFM",
+              "nativeQueryRef": "SegmentoRFM"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactVentas"
+                    }
+                  },
+                  "Property": "Clientes segmento"
+                }
+              },
+              "queryRef": "FactVentas.Clientes segmento",
+              "nativeQueryRef": "Clientes segmento"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Clientes por RFM fijo al 31/12/2025'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

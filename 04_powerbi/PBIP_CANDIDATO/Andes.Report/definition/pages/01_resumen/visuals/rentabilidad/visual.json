@@ -1,0 +1,116 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "rentabilidad",
+  "position": {
+    "x": 24,
+    "y": 575,
+    "z": 19,
+    "width": 1392,
+    "height": 290,
+    "tabOrder": 19
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimFecha"
+                    }
+                  },
+                  "Property": "Anio"
+                }
+              },
+              "queryRef": "DimFecha.Anio",
+              "nativeQueryRef": "Anio"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactVentas"
+                    }
+                  },
+                  "Property": "Ventas totales"
+                }
+              },
+              "queryRef": "FactVentas.Ventas totales",
+              "nativeQueryRef": "Ventas totales"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactVentas"
+                    }
+                  },
+                  "Property": "Costo total"
+                }
+              },
+              "queryRef": "FactVentas.Costo total",
+              "nativeQueryRef": "Costo total"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactVentas"
+                    }
+                  },
+                  "Property": "Utilidad bruta"
+                }
+              },
+              "queryRef": "FactVentas.Utilidad bruta",
+              "nativeQueryRef": "Utilidad bruta"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactVentas"
+                    }
+                  },
+                  "Property": "Crecimiento interanual"
+                }
+              },
+              "queryRef": "FactVentas.Crecimiento interanual",
+              "nativeQueryRef": "Crecimiento interanual"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Rentabilidad por año'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

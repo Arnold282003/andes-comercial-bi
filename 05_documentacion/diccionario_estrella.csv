@@ -1,0 +1,56 @@
+Tabla,Campo,TipoPowerBI,TipoM,Nulos,Descripcion,Ejemplo
+DimCliente,ClienteID,int64,Int64.Type,No,Clave de identificación sintética,1
+DimCliente,Cliente,string,type text,No,Atributo de análisis: Cliente,Cliente sintético 0001
+DimCliente,Region,string,type text,No,Atributo de análisis: Region,Lima
+DimCliente,FechaAlta,dateTime,type date,No,Fecha ISO calendario,2022-01-02
+DimCliente,TipoCliente,string,type text,No,Atributo de análisis: TipoCliente,Negocio
+DimCliente,RecenciaDias,int64,Int64.Type,No,Atributo de análisis: RecenciaDias,557
+DimCliente,FrecuenciaRFM,int64,Int64.Type,No,Atributo de análisis: FrecuenciaRFM,1
+DimCliente,MonetarioCent,int64,Int64.Type,No,Importe entero en céntimos de PEN,65780
+DimCliente,RScore,int64,Int64.Type,No,Atributo de análisis: RScore,1
+DimCliente,FScore,int64,Int64.Type,No,Atributo de análisis: FScore,1
+DimCliente,MScore,int64,Int64.Type,No,Atributo de análisis: MScore,1
+DimCliente,SegmentoRFM,string,type text,No,Atributo de análisis: SegmentoRFM,Ocasionales
+DimFecha,Fecha,dateTime,type date,No,Fecha ISO calendario,2023-01-01
+DimFecha,Anio,int64,Int64.Type,No,Atributo de análisis: Anio,2023
+DimFecha,MesNumero,int64,Int64.Type,No,Atributo de análisis: MesNumero,1
+DimFecha,Mes,string,type text,No,Atributo de análisis: Mes,Ene
+DimFecha,AnioMes,string,type text,No,Atributo de análisis: AnioMes,2023-01
+DimFecha,AnioMesOrden,int64,Int64.Type,No,Atributo de análisis: AnioMesOrden,202301
+DimFecha,Trimestre,int64,Int64.Type,No,Atributo de análisis: Trimestre,1
+DimFecha,DiaSemana,int64,Int64.Type,No,Atributo de análisis: DiaSemana,7
+DimProducto,ProductoID,int64,Int64.Type,No,Clave de identificación sintética,1
+DimProducto,Producto,string,type text,No,Atributo de análisis: Producto,Laptop Modelo 001
+DimProducto,CategoriaID,int64,Int64.Type,No,Clave de identificación sintética,1
+DimProducto,PrecioBaseCent,int64,Int64.Type,No,Importe entero en céntimos de PEN,308721
+DimProducto,CostoBaseCent,int64,Int64.Type,No,Importe entero en céntimos de PEN,243890
+DimProducto,Categoria,string,type text,No,Atributo de análisis: Categoria,Tecnología
+DimTienda,TiendaID,int64,Int64.Type,No,Clave de identificación sintética,1
+DimTienda,Tienda,string,type text,No,Atributo de análisis: Tienda,Andes Lima
+DimTienda,Region,string,type text,No,Atributo de análisis: Region,Lima
+DimTienda,Ciudad,string,type text,No,Atributo de análisis: Ciudad,Lima
+DimTienda,Zona,string,type text,No,Atributo de análisis: Zona,Centro
+DimTienda,Latitud,double,type number,No,Atributo de análisis: Latitud,-12.046
+DimTienda,Longitud,double,type number,No,Atributo de análisis: Longitud,-77.043
+DimTienda,Pais,string,type text,No,Atributo de análisis: Pais,Perú
+DimVendedor,VendedorID,int64,Int64.Type,No,Clave de identificación sintética,1
+DimVendedor,TiendaID,int64,Int64.Type,No,Clave de identificación sintética,1
+DimVendedor,Vendedor,string,type text,No,Atributo de análisis: Vendedor,Asesor sintético 01
+FactVentas,DetalleID,int64,Int64.Type,No,Clave de identificación sintética,1
+FactVentas,PedidoID,int64,Int64.Type,No,Clave de identificación sintética,1
+FactVentas,ProductoID,int64,Int64.Type,No,Clave de identificación sintética,1
+FactVentas,Cantidad,int64,Int64.Type,No,Atributo de análisis: Cantidad,2
+FactVentas,PrecioUnitarioCent,int64,Int64.Type,No,Importe entero en céntimos de PEN,308721
+FactVentas,CostoUnitarioCent,int64,Int64.Type,No,Importe entero en céntimos de PEN,245741
+FactVentas,DescuentoBps,int64,Int64.Type,No,Descuento en puntos básicos (100 = 1%),500
+FactVentas,VentaBrutaCent,int64,Int64.Type,No,Importe entero en céntimos de PEN,617442
+FactVentas,DescuentoCent,int64,Int64.Type,No,Importe entero en céntimos de PEN,30872
+FactVentas,VentaNetaCent,int64,Int64.Type,No,Importe entero en céntimos de PEN,586570
+FactVentas,CostoTotalCent,int64,Int64.Type,No,Importe entero en céntimos de PEN,491482
+FactVentas,IGVCent,int64,Int64.Type,No,Importe entero en céntimos de PEN,105583
+FactVentas,Fecha,dateTime,type date,No,Fecha ISO calendario,2023-01-01
+FactVentas,ClienteID,int64,Int64.Type,No,Clave de identificación sintética,1563
+FactVentas,TiendaID,int64,Int64.Type,No,Clave de identificación sintética,2
+FactVentas,VendedorID,int64,Int64.Type,No,Clave de identificación sintética,7
+FactVentas,Canal,string,type text,No,Atributo de análisis: Canal,Tienda
+FactVentas,UtilidadCent,int64,Int64.Type,No,Importe entero en céntimos de PEN,95088

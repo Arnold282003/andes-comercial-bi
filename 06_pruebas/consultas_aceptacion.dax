@@ -1,0 +1,41 @@
+// Ejecutar cada bloque EVALUATE por separado en Vista de consultas DAX.
+// 1. Global: comparar kpis_esperados.json GLOBAL.
+EVALUATE
+ROW("Ventas totales",[Ventas totales],"Costo total",[Costo total],"Utilidad bruta",[Utilidad bruta],
+"Margen bruto porcentual",[Margen bruto porcentual],"Numero de pedidos",[Numero de pedidos],
+"Ticket promedio",[Ticket promedio],"Unidades vendidas",[Unidades vendidas],
+"Clientes unicos",[Clientes unicos],"Frecuencia de compra",[Frecuencia de compra],
+"Venta bruta",[Venta bruta],"Descuento total",[Descuento total],"Descuento ponderado",[Descuento ponderado])
+
+// 2. Cada año: kpis_esperados.json 2023,2024,2025.
+EVALUATE
+SUMMARIZECOLUMNS(DimFecha[Anio],"Ventas totales",[Ventas totales],"Ventas anio anterior",[Ventas anio anterior],
+"Crecimiento interanual",[Crecimiento interanual],"Ventas YTD",[Ventas YTD])
+ORDER BY DimFecha[Anio]
+
+// 3. Cada mes: mensuales_esperados.csv.
+EVALUATE
+SUMMARIZECOLUMNS(DimFecha[AnioMes],"Ventas totales",[Ventas totales],"Ventas mes anterior",[Ventas mes anterior],
+"Crecimiento mensual",[Crecimiento mensual],"Ventas anio anterior",[Ventas anio anterior],
+"Crecimiento interanual",[Crecimiento interanual],"Ventas YTD",[Ventas YTD])
+ORDER BY DimFecha[AnioMes]
+
+// 4. Productos planos: productos_esperados.csv. Sin Categoria en agrupación para ranking global.
+EVALUATE
+SUMMARIZECOLUMNS(DimProducto[ProductoID],DimProducto[Producto],"Ventas totales",[Ventas totales],
+"Ranking productos",[Ranking productos],"Participacion producto",[Participacion producto])
+ORDER BY DimProducto[ProductoID]
+
+// 5. Clientes: rfm_esperado.csv. Frecuencia 0 conserva clientes sin compras.
+EVALUATE
+SUMMARIZECOLUMNS(DimCliente[ClienteID],"Recencia RFM",[Recencia RFM],"Frecuencia RFM",[Frecuencia RFM],
+"Monetario RFM",[Monetario RFM],"R score",[R score],"F score",[F score],"M score",[M score],"Segmento RFM",[Segmento RFM])
+ORDER BY DimCliente[ClienteID]
+
+// 6. Segmentos: kpis_esperados.json Segmentos.
+EVALUATE
+SUMMARIZECOLUMNS(DimCliente[SegmentoRFM],"Clientes segmento",[Clientes segmento])
+
+// 7. Categorías: hallazgos_comerciales.md.
+EVALUATE
+SUMMARIZECOLUMNS(DimProducto[Categoria],"Ventas por categoria",[Ventas por categoria],"Margen",[Margen bruto porcentual])

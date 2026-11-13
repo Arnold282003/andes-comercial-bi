@@ -1,0 +1,560 @@
+[
+  {
+    "Pagina": "01_resumen",
+    "Visual": "slicer0",
+    "Titulo": "Anio",
+    "Tipo": "slicer",
+    "X": 24,
+    "Y": 16,
+    "Ancho": 440,
+    "Alto": 80,
+    "Campos": {
+      "Values": [
+        "DimFecha.Anio"
+      ]
+    }
+  },
+  {
+    "Pagina": "01_resumen",
+    "Visual": "slicer1",
+    "Titulo": "Region",
+    "Tipo": "slicer",
+    "X": 489,
+    "Y": 16,
+    "Ancho": 440,
+    "Alto": 80,
+    "Campos": {
+      "Values": [
+        "DimTienda.Region"
+      ]
+    }
+  },
+  {
+    "Pagina": "01_resumen",
+    "Visual": "slicer2",
+    "Titulo": "Categoria",
+    "Tipo": "slicer",
+    "X": 954,
+    "Y": 16,
+    "Ancho": 440,
+    "Alto": 80,
+    "Campos": {
+      "Values": [
+        "DimProducto.Categoria"
+      ]
+    }
+  },
+  {
+    "Pagina": "02_productos",
+    "Visual": "slicer0",
+    "Titulo": "Anio",
+    "Tipo": "slicer",
+    "X": 24,
+    "Y": 16,
+    "Ancho": 440,
+    "Alto": 80,
+    "Campos": {
+      "Values": [
+        "DimFecha.Anio"
+      ]
+    }
+  },
+  {
+    "Pagina": "02_productos",
+    "Visual": "slicer1",
+    "Titulo": "Region",
+    "Tipo": "slicer",
+    "X": 489,
+    "Y": 16,
+    "Ancho": 440,
+    "Alto": 80,
+    "Campos": {
+      "Values": [
+        "DimTienda.Region"
+      ]
+    }
+  },
+  {
+    "Pagina": "02_productos",
+    "Visual": "slicer2",
+    "Titulo": "Categoria",
+    "Tipo": "slicer",
+    "X": 954,
+    "Y": 16,
+    "Ancho": 440,
+    "Alto": 80,
+    "Campos": {
+      "Values": [
+        "DimProducto.Categoria"
+      ]
+    }
+  },
+  {
+    "Pagina": "03_clientes",
+    "Visual": "slicer0",
+    "Titulo": "Anio",
+    "Tipo": "slicer",
+    "X": 24,
+    "Y": 16,
+    "Ancho": 440,
+    "Alto": 80,
+    "Campos": {
+      "Values": [
+        "DimFecha.Anio"
+      ]
+    }
+  },
+  {
+    "Pagina": "03_clientes",
+    "Visual": "slicer1",
+    "Titulo": "Region",
+    "Tipo": "slicer",
+    "X": 489,
+    "Y": 16,
+    "Ancho": 440,
+    "Alto": 80,
+    "Campos": {
+      "Values": [
+        "DimTienda.Region"
+      ]
+    }
+  },
+  {
+    "Pagina": "03_clientes",
+    "Visual": "slicer2",
+    "Titulo": "Categoria",
+    "Tipo": "slicer",
+    "X": 954,
+    "Y": 16,
+    "Ancho": 440,
+    "Alto": 80,
+    "Campos": {
+      "Values": [
+        "DimProducto.Categoria"
+      ]
+    }
+  },
+  {
+    "Pagina": "04_geografia",
+    "Visual": "slicer0",
+    "Titulo": "Anio",
+    "Tipo": "slicer",
+    "X": 24,
+    "Y": 16,
+    "Ancho": 440,
+    "Alto": 80,
+    "Campos": {
+      "Values": [
+        "DimFecha.Anio"
+      ]
+    }
+  },
+  {
+    "Pagina": "04_geografia",
+    "Visual": "slicer1",
+    "Titulo": "Region",
+    "Tipo": "slicer",
+    "X": 489,
+    "Y": 16,
+    "Ancho": 440,
+    "Alto": 80,
+    "Campos": {
+      "Values": [
+        "DimTienda.Region"
+      ]
+    }
+  },
+  {
+    "Pagina": "04_geografia",
+    "Visual": "slicer2",
+    "Titulo": "Categoria",
+    "Tipo": "slicer",
+    "X": 954,
+    "Y": 16,
+    "Ancho": 440,
+    "Alto": 80,
+    "Campos": {
+      "Values": [
+        "DimProducto.Categoria"
+      ]
+    }
+  },
+  {
+    "Pagina": "01_resumen",
+    "Visual": "kpi0",
+    "Titulo": "Ventas totales",
+    "Tipo": "card",
+    "X": 24,
+    "Y": 112,
+    "Ancho": 265,
+    "Alto": 125,
+    "Campos": {
+      "Values": [
+        "FactVentas.Ventas totales"
+      ]
+    }
+  },
+  {
+    "Pagina": "01_resumen",
+    "Visual": "kpi1",
+    "Titulo": "Utilidad bruta",
+    "Tipo": "card",
+    "X": 304,
+    "Y": 112,
+    "Ancho": 265,
+    "Alto": 125,
+    "Campos": {
+      "Values": [
+        "FactVentas.Utilidad bruta"
+      ]
+    }
+  },
+  {
+    "Pagina": "01_resumen",
+    "Visual": "kpi2",
+    "Titulo": "Margen bruto porcentual",
+    "Tipo": "card",
+    "X": 584,
+    "Y": 112,
+    "Ancho": 265,
+    "Alto": 125,
+    "Campos": {
+      "Values": [
+        "FactVentas.Margen bruto porcentual"
+      ]
+    }
+  },
+  {
+    "Pagina": "01_resumen",
+    "Visual": "kpi3",
+    "Titulo": "Numero de pedidos",
+    "Tipo": "card",
+    "X": 864,
+    "Y": 112,
+    "Ancho": 265,
+    "Alto": 125,
+    "Campos": {
+      "Values": [
+        "FactVentas.Numero de pedidos"
+      ]
+    }
+  },
+  {
+    "Pagina": "01_resumen",
+    "Visual": "kpi4",
+    "Titulo": "Ticket promedio",
+    "Tipo": "card",
+    "X": 1144,
+    "Y": 112,
+    "Ancho": 265,
+    "Alto": 125,
+    "Campos": {
+      "Values": [
+        "FactVentas.Ticket promedio"
+      ]
+    }
+  },
+  {
+    "Pagina": "01_resumen",
+    "Visual": "mensual",
+    "Titulo": "Ventas por mes",
+    "Tipo": "lineChart",
+    "X": 24,
+    "Y": 260,
+    "Ancho": 900,
+    "Alto": 290,
+    "Campos": {
+      "Category": [
+        "DimFecha.AnioMes"
+      ],
+      "Y": [
+        "FactVentas.Ventas totales"
+      ]
+    }
+  },
+  {
+    "Pagina": "01_resumen",
+    "Visual": "anual",
+    "Titulo": "Comparación anual",
+    "Tipo": "clusteredColumnChart",
+    "X": 948,
+    "Y": 260,
+    "Ancho": 468,
+    "Alto": 290,
+    "Campos": {
+      "Category": [
+        "DimFecha.Anio"
+      ],
+      "Y": [
+        "FactVentas.Ventas totales",
+        "FactVentas.Ventas anio anterior"
+      ]
+    }
+  },
+  {
+    "Pagina": "01_resumen",
+    "Visual": "rentabilidad",
+    "Titulo": "Rentabilidad por año",
+    "Tipo": "tableEx",
+    "X": 24,
+    "Y": 575,
+    "Ancho": 1392,
+    "Alto": 290,
+    "Campos": {
+      "Values": [
+        "DimFecha.Anio",
+        "FactVentas.Ventas totales",
+        "FactVentas.Costo total",
+        "FactVentas.Utilidad bruta",
+        "FactVentas.Crecimiento interanual"
+      ]
+    }
+  },
+  {
+    "Pagina": "02_productos",
+    "Visual": "ranking",
+    "Titulo": "Ranking de productos",
+    "Tipo": "tableEx",
+    "X": 24,
+    "Y": 115,
+    "Ancho": 690,
+    "Alto": 360,
+    "Campos": {
+      "Values": [
+        "DimProducto.Producto",
+        "FactVentas.Ventas totales",
+        "FactVentas.Ranking productos",
+        "FactVentas.Participacion producto"
+      ]
+    }
+  },
+  {
+    "Pagina": "02_productos",
+    "Visual": "categoria",
+    "Titulo": "Ventas por categoría",
+    "Tipo": "clusteredBarChart",
+    "X": 738,
+    "Y": 115,
+    "Ancho": 678,
+    "Alto": 360,
+    "Campos": {
+      "Category": [
+        "DimProducto.Categoria"
+      ],
+      "Y": [
+        "FactVentas.Ventas por categoria"
+      ]
+    }
+  },
+  {
+    "Pagina": "02_productos",
+    "Visual": "bajo_margen",
+    "Titulo": "Productos menos rentables: ordenar por margen",
+    "Tipo": "tableEx",
+    "X": 24,
+    "Y": 500,
+    "Ancho": 690,
+    "Alto": 365,
+    "Campos": {
+      "Values": [
+        "DimProducto.Producto",
+        "FactVentas.Utilidad bruta",
+        "FactVentas.Margen bruto porcentual"
+      ]
+    }
+  },
+  {
+    "Pagina": "02_productos",
+    "Visual": "descuentos",
+    "Titulo": "Descuento y margen por categoría",
+    "Tipo": "tableEx",
+    "X": 738,
+    "Y": 500,
+    "Ancho": 678,
+    "Alto": 365,
+    "Campos": {
+      "Values": [
+        "DimProducto.Categoria",
+        "FactVentas.Descuento total",
+        "FactVentas.Descuento ponderado",
+        "FactVentas.Margen bruto porcentual"
+      ]
+    }
+  },
+  {
+    "Pagina": "03_clientes",
+    "Visual": "kpi0",
+    "Titulo": "Clientes unicos",
+    "Tipo": "card",
+    "X": 24,
+    "Y": 112,
+    "Ancho": 440,
+    "Alto": 125,
+    "Campos": {
+      "Values": [
+        "FactVentas.Clientes unicos"
+      ]
+    }
+  },
+  {
+    "Pagina": "03_clientes",
+    "Visual": "kpi1",
+    "Titulo": "Frecuencia de compra",
+    "Tipo": "card",
+    "X": 489,
+    "Y": 112,
+    "Ancho": 440,
+    "Alto": 125,
+    "Campos": {
+      "Values": [
+        "FactVentas.Frecuencia de compra"
+      ]
+    }
+  },
+  {
+    "Pagina": "03_clientes",
+    "Visual": "kpi2",
+    "Titulo": "Ticket promedio",
+    "Tipo": "card",
+    "X": 954,
+    "Y": 112,
+    "Ancho": 440,
+    "Alto": 125,
+    "Campos": {
+      "Values": [
+        "FactVentas.Ticket promedio"
+      ]
+    }
+  },
+  {
+    "Pagina": "03_clientes",
+    "Visual": "rfm",
+    "Titulo": "Clientes por RFM fijo al 31/12/2025",
+    "Tipo": "clusteredBarChart",
+    "X": 24,
+    "Y": 260,
+    "Ancho": 600,
+    "Alto": 260,
+    "Campos": {
+      "Category": [
+        "DimCliente.SegmentoRFM"
+      ],
+      "Y": [
+        "FactVentas.Clientes segmento"
+      ]
+    }
+  },
+  {
+    "Pagina": "03_clientes",
+    "Visual": "clientes",
+    "Titulo": "Clientes de mayor valor",
+    "Tipo": "tableEx",
+    "X": 648,
+    "Y": 260,
+    "Ancho": 768,
+    "Alto": 605,
+    "Campos": {
+      "Values": [
+        "DimCliente.Cliente",
+        "FactVentas.Ventas totales",
+        "FactVentas.Recencia RFM",
+        "FactVentas.Frecuencia RFM",
+        "FactVentas.Monetario RFM",
+        "FactVentas.Segmento RFM"
+      ]
+    }
+  },
+  {
+    "Pagina": "03_clientes",
+    "Visual": "evolucion",
+    "Titulo": "Clientes compradores por mes",
+    "Tipo": "lineChart",
+    "X": 24,
+    "Y": 545,
+    "Ancho": 600,
+    "Alto": 320,
+    "Campos": {
+      "Category": [
+        "DimFecha.AnioMes"
+      ],
+      "Y": [
+        "FactVentas.Clientes unicos"
+      ]
+    }
+  },
+  {
+    "Pagina": "04_geografia",
+    "Visual": "region",
+    "Titulo": "Ventas por región de la tienda",
+    "Tipo": "clusteredBarChart",
+    "X": 24,
+    "Y": 115,
+    "Ancho": 690,
+    "Alto": 350,
+    "Campos": {
+      "Category": [
+        "DimTienda.Region"
+      ],
+      "Y": [
+        "FactVentas.Ventas totales"
+      ]
+    }
+  },
+  {
+    "Pagina": "04_geografia",
+    "Visual": "zonas",
+    "Titulo": "Ventas y margen por zona",
+    "Tipo": "tableEx",
+    "X": 738,
+    "Y": 115,
+    "Ancho": 678,
+    "Alto": 350,
+    "Campos": {
+      "Values": [
+        "DimTienda.Zona",
+        "FactVentas.Ventas totales",
+        "FactVentas.Margen bruto porcentual"
+      ]
+    }
+  },
+  {
+    "Pagina": "04_geografia",
+    "Visual": "temporal",
+    "Titulo": "Tendencia y comparación interanual",
+    "Tipo": "lineChart",
+    "X": 24,
+    "Y": 490,
+    "Ancho": 690,
+    "Alto": 375,
+    "Campos": {
+      "Category": [
+        "DimFecha.AnioMes"
+      ],
+      "Y": [
+        "FactVentas.Ventas totales",
+        "FactVentas.Ventas anio anterior"
+      ]
+    }
+  },
+  {
+    "Pagina": "04_geografia",
+    "Visual": "estacional",
+    "Titulo": "Estacionalidad por mes y año",
+    "Tipo": "clusteredColumnChart",
+    "X": 738,
+    "Y": 490,
+    "Ancho": 678,
+    "Alto": 375,
+    "Campos": {
+      "Category": [
+        "DimFecha.Mes"
+      ],
+      "Series": [
+        "DimFecha.Anio"
+      ],
+      "Y": [
+        "FactVentas.Ventas totales"
+      ]
+    }
+  }
+]

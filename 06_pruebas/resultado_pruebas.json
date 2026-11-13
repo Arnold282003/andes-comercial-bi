@@ -1,0 +1,9 @@
+{
+  "ejecutadas": 23,
+  "fallos": 0,
+  "errores": 0,
+  "motor": "Python unittest + SQLite",
+  "dax_ejecutado": false,
+  "powerbi_desktop_abierto": false,
+  "postgresql_ejecutado": false
+}

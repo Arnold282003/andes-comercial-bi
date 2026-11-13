@@ -1,0 +1,111 @@
+// Ventas netas de descuentos, sin IGV, en soles.
+// Formato: "S/ "#,0.00;("S/ "#,0.00);"S/ "0.00
+Ventas totales = DIVIDE(SUM(FactVentas[VentaNetaCent]),100)
+
+// Costo histórico de las unidades vendidas.
+// Formato: "S/ "#,0.00;("S/ "#,0.00);"S/ "0.00
+Costo total = DIVIDE(SUM(FactVentas[CostoTotalCent]),100)
+
+// No incluye gastos operativos ni impuestos sobre renta.
+// Formato: "S/ "#,0.00;("S/ "#,0.00);"S/ "0.00
+Utilidad bruta = [Ventas totales]-[Costo total]
+
+// Margen ponderado por ventas. Nunca promediar porcentajes de filas.
+// Formato: 0.00%
+Margen bruto porcentual = DIVIDE([Utilidad bruta],[Ventas totales])
+
+// Pedidos con al menos una línea en el contexto. No es aditivo entre productos.
+// Formato: #,0
+Numero de pedidos = DISTINCTCOUNT(FactVentas[PedidoID])
+
+// Venta de líneas visibles por pedido visible; filtrado por categoría es ticket parcial.
+// Formato: "S/ "#,0.00;("S/ "#,0.00);"S/ "0.00
+Ticket promedio = DIVIDE([Ventas totales],[Numero de pedidos])
+
+// Cantidad total de artículos.
+// Formato: #,0
+Unidades vendidas = SUM(FactVentas[Cantidad])
+
+// Mismo periodo calendario del año anterior. 2023 no tiene comparativo en este conjunto.
+// Formato: "S/ "#,0.00;("S/ "#,0.00);"S/ "0.00
+Ventas anio anterior = CALCULATE([Ventas totales],SAMEPERIODLASTYEAR(DimFecha[Fecha]))
+
+// BLANK cuando no hay base comparable o su valor es cero.
+// Formato: 0.00%
+Crecimiento interanual = VAR Prev = [Ventas anio anterior] RETURN IF(NOT ISBLANK(Prev),DIVIDE([Ventas totales]-Prev,Prev))
+
+// Acumulado hasta última fecha del contexto, reinicia en enero. Usar un año o eje AnioMes.
+// Formato: "S/ "#,0.00;("S/ "#,0.00);"S/ "0.00
+Ventas YTD = TOTALYTD([Ventas totales],DimFecha[Fecha])
+
+// Disponible con un único mes en contexto; sin total multimensual.
+// Formato: "S/ "#,0.00;("S/ "#,0.00);"S/ "0.00
+Ventas mes anterior = IF(HASONEVALUE(DimFecha[AnioMes]),CALCULATE([Ventas totales],DATEADD(DimFecha[Fecha],-1,MONTH)))
+
+// Un único mes completo; comparar con mes completo previo. No usar slicer de días parciales.
+// Formato: 0.00%
+Crecimiento mensual = VAR Prev = [Ventas mes anterior] RETURN IF(NOT ISBLANK(Prev),DIVIDE([Ventas totales]-Prev,Prev))
+
+// Clientes compradores en el contexto, no total del maestro.
+// Formato: #,0
+Clientes unicos = DISTINCTCOUNT(FactVentas[ClienteID])
+
+// Pedidos por cliente comprador del periodo visible.
+// Formato: 0.00
+Frecuencia de compra = DIVIDE([Numero de pedidos],[Clientes unicos])
+
+// Colocar DimProducto[Categoria] en filas/eje. La relación hace la agrupación.
+// Formato: "S/ "#,0.00;("S/ "#,0.00);"S/ "0.00
+Ventas por categoria = [Ventas totales]
+
+// Porcentaje de la selección externa de productos y categorías; mantiene fecha, tienda y cliente.
+// Formato: 0.00%
+Participacion producto = DIVIDE([Ventas totales],CALCULATE([Ventas totales],ALLSELECTED(DimProducto)))
+
+// Ranking denso dentro de la categoría/filtros externos visibles. Sin ranking en totales.
+// Formato: 0
+Ranking productos = IF(ISINSCOPE(DimProducto[Producto]),RANKX(ALLSELECTED(DimProducto[ProductoID],DimProducto[Producto]),[Ventas totales],,DESC,Dense))
+
+// Días desde última compra al 31/12/2025, histórico completo. -1 del archivo se muestra vacío.
+// Formato: 0
+Recencia RFM = VAR R = SELECTEDVALUE(DimCliente[RecenciaDias]) RETURN IF(R>=0,R)
+
+// Pedidos de un cliente en 2023–2025, snapshot fijo.
+// Formato: 0
+Frecuencia RFM = SELECTEDVALUE(DimCliente[FrecuenciaRFM])
+
+// Venta histórica de un cliente, snapshot fijo.
+// Formato: "S/ "#,0.00;("S/ "#,0.00);"S/ "0.00
+Monetario RFM = DIVIDE(SELECTEDVALUE(DimCliente[MonetarioCent]),100)
+
+// 1–5 por recencia, cero sin compras.
+// Formato: 0
+R score = SELECTEDVALUE(DimCliente[RScore])
+
+// 1–5 por frecuencia, cero sin compras.
+// Formato: 0
+F score = SELECTEDVALUE(DimCliente[FScore])
+
+// 1–5 por monetario, cero sin compras.
+// Formato: 0
+M score = SELECTEDVALUE(DimCliente[MScore])
+
+// Etiqueta fija por cliente, sin etiqueta total.
+// Formato: 
+Segmento RFM = SELECTEDVALUE(DimCliente[SegmentoRFM])
+
+// Cuenta clientes del maestro por segmento fijo, no cambia con fecha o tienda.
+// Formato: #,0
+Clientes segmento = COUNTROWS(DimCliente)
+
+// Venta antes de descuentos, sin IGV.
+// Formato: "S/ "#,0.00;("S/ "#,0.00);"S/ "0.00
+Venta bruta = DIVIDE(SUM(FactVentas[VentaBrutaCent]),100)
+
+// Descuento monetario redondeado por línea.
+// Formato: "S/ "#,0.00;("S/ "#,0.00);"S/ "0.00
+Descuento total = DIVIDE(SUM(FactVentas[DescuentoCent]),100)
+
+// Descuento efectivo ponderado por venta bruta.
+// Formato: 0.00%
+Descuento ponderado = DIVIDE([Descuento total],[Venta bruta])

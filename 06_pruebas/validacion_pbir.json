@@ -1,0 +1,174 @@
+[
+  {
+    "archivo": "04_powerbi/PBIP_CANDIDATO/Andes.Report/definition/pages/01_resumen/page.json",
+    "errores": []
+  },
+  {
+    "archivo": "04_powerbi/PBIP_CANDIDATO/Andes.Report/definition/pages/01_resumen/visuals/anual/visual.json",
+    "errores": []
+  },
+  {
+    "archivo": "04_powerbi/PBIP_CANDIDATO/Andes.Report/definition/pages/01_resumen/visuals/kpi0/visual.json",
+    "errores": []
+  },
+  {
+    "archivo": "04_powerbi/PBIP_CANDIDATO/Andes.Report/definition/pages/01_resumen/visuals/kpi1/visual.json",
+    "errores": []
+  },
+  {
+    "archivo": "04_powerbi/PBIP_CANDIDATO/Andes.Report/definition/pages/01_resumen/visuals/kpi2/visual.json",
+    "errores": []
+  },
+  {
+    "archivo": "04_powerbi/PBIP_CANDIDATO/Andes.Report/definition/pages/01_resumen/visuals/kpi3/visual.json",
+    "errores": []
+  },
+  {
+    "archivo": "04_powerbi/PBIP_CANDIDATO/Andes.Report/definition/pages/01_resumen/visuals/kpi4/visual.json",
+    "errores": []
+  },
+  {
+    "archivo": "04_powerbi/PBIP_CANDIDATO/Andes.Report/definition/pages/01_resumen/visuals/mensual/visual.json",
+    "errores": []
+  },
+  {
+    "archivo": "04_powerbi/PBIP_CANDIDATO/Andes.Report/definition/pages/01_resumen/visuals/rentabilidad/visual.json",
+    "errores": []
+  },
+  {
+    "archivo": "04_powerbi/PBIP_CANDIDATO/Andes.Report/definition/pages/01_resumen/visuals/slicer0/visual.json",
+    "errores": []
+  },
+  {
+    "archivo": "04_powerbi/PBIP_CANDIDATO/Andes.Report/definition/pages/01_resumen/visuals/slicer1/visual.json",
+    "errores": []
+  },
+  {
+    "archivo": "04_powerbi/PBIP_CANDIDATO/Andes.Report/definition/pages/01_resumen/visuals/slicer2/visual.json",
+    "errores": []
+  },
+  {
+    "archivo": "04_powerbi/PBIP_CANDIDATO/Andes.Report/definition/pages/02_productos/page.json",
+    "errores": []
+  },
+  {
+    "archivo": "04_powerbi/PBIP_CANDIDATO/Andes.Report/definition/pages/02_productos/visuals/bajo_margen/visual.json",
+    "errores": []
+  },
+  {
+    "archivo": "04_powerbi/PBIP_CANDIDATO/Andes.Report/definition/pages/02_productos/visuals/categoria/visual.json",
+    "errores": []
+  },
+  {
+    "archivo": "04_powerbi/PBIP_CANDIDATO/Andes.Report/definition/pages/02_productos/visuals/descuentos/visual.json",
+    "errores": []
+  },
+  {
+    "archivo": "04_powerbi/PBIP_CANDIDATO/Andes.Report/definition/pages/02_productos/visuals/ranking/visual.json",
+    "errores": []
+  },
+  {
+    "archivo": "04_powerbi/PBIP_CANDIDATO/Andes.Report/definition/pages/02_productos/visuals/slicer0/visual.json",
+    "errores": []
+  },
+  {
+    "archivo": "04_powerbi/PBIP_CANDIDATO/Andes.Report/definition/pages/02_productos/visuals/slicer1/visual.json",
+    "errores": []
+  },
+  {
+    "archivo": "04_powerbi/PBIP_CANDIDATO/Andes.Report/definition/pages/02_productos/visuals/slicer2/visual.json",
+    "errores": []
+  },
+  {
+    "archivo": "04_powerbi/PBIP_CANDIDATO/Andes.Report/definition/pages/03_clientes/page.json",
+    "errores": []
+  },
+  {
+    "archivo": "04_powerbi/PBIP_CANDIDATO/Andes.Report/definition/pages/03_clientes/visuals/clientes/visual.json",
+    "errores": []
+  },
+  {
+    "archivo": "04_powerbi/PBIP_CANDIDATO/Andes.Report/definition/pages/03_clientes/visuals/evolucion/visual.json",
+    "errores": []
+  },
+  {
+    "archivo": "04_powerbi/PBIP_CANDIDATO/Andes.Report/definition/pages/03_clientes/visuals/kpi0/visual.json",
+    "errores": []
+  },
+  {
+    "archivo": "04_powerbi/PBIP_CANDIDATO/Andes.Report/definition/pages/03_clientes/visuals/kpi1/visual.json",
+    "errores": []
+  },
+  {
+    "archivo": "04_powerbi/PBIP_CANDIDATO/Andes.Report/definition/pages/03_clientes/visuals/kpi2/visual.json",
+    "errores": []
+  },
+  {
+    "archivo": "04_powerbi/PBIP_CANDIDATO/Andes.Report/definition/pages/03_clientes/visuals/rfm/visual.json",
+    "errores": []
+  },
+  {
+    "archivo": "04_powerbi/PBIP_CANDIDATO/Andes.Report/definition/pages/03_clientes/visuals/slicer0/visual.json",
+    "errores": []
+  },
+  {
+    "archivo": "04_powerbi/PBIP_CANDIDATO/Andes.Report/definition/pages/03_clientes/visuals/slicer1/visual.json",
+    "errores": []
+  },
+  {
+    "archivo": "04_powerbi/PBIP_CANDIDATO/Andes.Report/definition/pages/03_clientes/visuals/slicer2/visual.json",
+    "errores": []
+  },
+  {
+    "archivo": "04_powerbi/PBIP_CANDIDATO/Andes.Report/definition/pages/04_geografia/page.json",
+    "errores": []
+  },
+  {
+    "archivo": "04_powerbi/PBIP_CANDIDATO/Andes.Report/definition/pages/04_geografia/visuals/estacional/visual.json",
+    "errores": []
+  },
+  {
+    "archivo": "04_powerbi/PBIP_CANDIDATO/Andes.Report/definition/pages/04_geografia/visuals/region/visual.json",
+    "errores": []
+  },
+  {
+    "archivo": "04_powerbi/PBIP_CANDIDATO/Andes.Report/definition/pages/04_geografia/visuals/slicer0/visual.json",
+    "errores": []
+  },
+  {
+    "archivo": "04_powerbi/PBIP_CANDIDATO/Andes.Report/definition/pages/04_geografia/visuals/slicer1/visual.json",
+    "errores": []
+  },
+  {
+    "archivo": "04_powerbi/PBIP_CANDIDATO/Andes.Report/definition/pages/04_geografia/visuals/slicer2/visual.json",
+    "errores": []
+  },
+  {
+    "archivo": "04_powerbi/PBIP_CANDIDATO/Andes.Report/definition/pages/04_geografia/visuals/temporal/visual.json",
+    "errores": []
+  },
+  {
+    "archivo": "04_powerbi/PBIP_CANDIDATO/Andes.Report/definition/pages/04_geografia/visuals/zonas/visual.json",
+    "errores": []
+  },
+  {
+    "archivo": "04_powerbi/PBIP_CANDIDATO/Andes.Report/definition/pages/pages.json",
+    "errores": []
+  },
+  {
+    "archivo": "04_powerbi/PBIP_CANDIDATO/Andes.Report/definition/report.json",
+    "errores": []
+  },
+  {
+    "archivo": "04_powerbi/PBIP_CANDIDATO/Andes.Report/definition/version.json",
+    "errores": []
+  },
+  {
+    "archivo": "04_powerbi/PBIP_CANDIDATO/Andes.Report/definition.pbir",
+    "errores": []
+  },
+  {
+    "archivo": "04_powerbi/PBIP_CANDIDATO/Andes.pbip",
+    "errores": []
+  }
+]

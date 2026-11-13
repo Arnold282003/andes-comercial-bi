@@ -1,0 +1,28 @@
+test_all_months_have_sales (__main__.DataTests.test_all_months_have_sales) ... ok
+test_calendar_continuous (__main__.DataTests.test_calendar_continuous) ... ok
+test_clients_registered_before_purchase (__main__.DataTests.test_clients_registered_before_purchase) ... ok
+test_corrupted_money_rejected (__main__.DataTests.test_corrupted_money_rejected) ... ok
+test_foreign_keys (__main__.DataTests.test_foreign_keys) ... ok
+test_hashes (__main__.DataTests.test_hashes) ... ok
+test_invalid_type_rejected (__main__.DataTests.test_invalid_type_rejected) ... ok
+test_line_arithmetic (__main__.DataTests.test_line_arithmetic) ... ok
+test_monthly_sql_python (__main__.DataTests.test_monthly_sql_python) ... ok
+test_negative_quantity_rejected (__main__.DataTests.test_negative_quantity_rejected) ... ok
+test_no_stock_or_credit_assumptions (__main__.DataTests.test_no_stock_or_credit_assumptions) ... ok
+test_normalization (__main__.DataTests.test_normalization) ... ok
+test_order_consistency (__main__.DataTests.test_order_consistency) ... ok
+test_primary_keys_and_missing (__main__.DataTests.test_primary_keys_and_missing) ... ok
+test_product_selection_denominator (__main__.DataTests.test_product_selection_denominator) ... ok
+test_raw_to_star_reconciliation (__main__.DataTests.test_raw_to_star_reconciliation) ... ok
+test_reject_duplicate (__main__.DataTests.test_reject_duplicate) ... ok
+test_reject_missing (__main__.DataTests.test_reject_missing) ... ok
+test_rfm (__main__.DataTests.test_rfm) ... ok
+test_rfm_scores_and_labels (__main__.DataTests.test_rfm_scores_and_labels) ... ok
+test_sql_python_all_periods (__main__.DataTests.test_sql_python_all_periods) ... ok
+test_volume (__main__.DataTests.test_volume) ... ok
+test_zero_division_reference (__main__.DataTests.test_zero_division_reference) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 6.970s
+
+OK

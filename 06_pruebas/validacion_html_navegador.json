@@ -1,0 +1,7 @@
+{
+  "intentado": true,
+  "completado": false,
+  "motivo": "Chromium no pudo iniciar: socket() Operation not permitted en el entorno. No hubo render ni clicks en navegador.",
+  "alternativa_ejecutada": "8 pruebas Node vm, generación de las cuatro vistas y filtro cruzado comparado con SQLite",
+  "DAX_ejecutado": false
+}

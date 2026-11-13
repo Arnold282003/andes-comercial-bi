@@ -1,0 +1,13 @@
+digraph Model {
+ graph [rankdir=TB, bgcolor="#F4F7FA", pad="0.4", nodesep="0.6", ranksep="0.8", label="ANDES COMERCIAL · Modelo estrella", labelloc=t, fontname="DejaVu Sans", fontsize=22];
+ node [shape=box, style="rounded,filled", fillcolor="white", color="#087F8C", fontname="DejaVu Sans", fontsize=13, margin="0.20,0.14"];
+ edge [color="#087F8C", fontname="DejaVu Sans", fontsize=11];
+ D [label="DimFecha\nPK Fecha\nAño · mes · trimestre"];
+ C [label="DimCliente\nPK ClienteID\nTipo · región · RFM fijo"];
+ P [label="DimProducto\nPK ProductoID\nProducto · categoría"];
+ T [label="DimTienda\nPK TiendaID\nRegión · zona · coordenadas"];
+ V [label="DimVendedor\nPK VendedorID\nVendedor · tienda de origen"];
+ F [label="FactVentas · 30 000 líneas\nPK DetalleID\nPedidoID + ProductoID únicos\nFK Fecha, ClienteID, ProductoID, TiendaID, VendedorID\nCantidad · precio · costo · descuento\nImportes enteros en céntimos", fillcolor="#16324F", fontcolor="white", fontsize=14];
+ D -> F [label="1 : *"]; C -> F [label="1 : *"]; P -> F [label="1 : *"]; T -> F [label="1 : *"]; V -> F [label="1 : *"];
+ {rank=same;D;C;P;} {rank=same;T;V;}
+}

@@ -1,0 +1,52 @@
+{
+  "motor": "Node vm con DOM simulado",
+  "casos": [
+    {
+      "name": "Global exacto",
+      "pass": true
+    },
+    {
+      "name": "A\u00f1o 2025",
+      "pass": true
+    },
+    {
+      "name": "Reset",
+      "pass": true
+    },
+    {
+      "name": "Generaci\u00f3n DOM vista 0",
+      "pass": true
+    },
+    {
+      "name": "Generaci\u00f3n DOM vista 1",
+      "pass": true
+    },
+    {
+      "name": "Generaci\u00f3n DOM vista 2",
+      "pass": true
+    },
+    {
+      "name": "Generaci\u00f3n DOM vista 3",
+      "pass": true
+    },
+    {
+      "name": "Divisi\u00f3n nula",
+      "pass": true
+    }
+  ],
+  "seleccion_2025_Lima_Tecnologia": {
+    "v": 316143583,
+    "c": 269243462,
+    "d": 18460297,
+    "g": 334603880,
+    "q": 1275,
+    "orders": 511,
+    "clients": 327,
+    "margin": 0.14835069734754033,
+    "ticket": 618676.2876712328,
+    "freq": 1.562691131498471
+  },
+  "render_navegador": false,
+  "powerbi": false,
+  "filtro_cruzado_concuerda_sqlite": true
+}

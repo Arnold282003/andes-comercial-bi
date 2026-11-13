@@ -1,0 +1,170 @@
+[
+  {
+    "nombre": "Ventas totales",
+    "dax": "DIVIDE(SUM(FactVentas[VentaNetaCent]),100)",
+    "formato": "\"S/ \"#,0.00;(\"S/ \"#,0.00);\"S/ \"0.00",
+    "explicacion": "Ventas netas de descuentos, sin IGV, en soles."
+  },
+  {
+    "nombre": "Costo total",
+    "dax": "DIVIDE(SUM(FactVentas[CostoTotalCent]),100)",
+    "formato": "\"S/ \"#,0.00;(\"S/ \"#,0.00);\"S/ \"0.00",
+    "explicacion": "Costo histórico de las unidades vendidas."
+  },
+  {
+    "nombre": "Utilidad bruta",
+    "dax": "[Ventas totales]-[Costo total]",
+    "formato": "\"S/ \"#,0.00;(\"S/ \"#,0.00);\"S/ \"0.00",
+    "explicacion": "No incluye gastos operativos ni impuestos sobre renta."
+  },
+  {
+    "nombre": "Margen bruto porcentual",
+    "dax": "DIVIDE([Utilidad bruta],[Ventas totales])",
+    "formato": "0.00%",
+    "explicacion": "Margen ponderado por ventas. Nunca promediar porcentajes de filas."
+  },
+  {
+    "nombre": "Numero de pedidos",
+    "dax": "DISTINCTCOUNT(FactVentas[PedidoID])",
+    "formato": "#,0",
+    "explicacion": "Pedidos con al menos una línea en el contexto. No es aditivo entre productos."
+  },
+  {
+    "nombre": "Ticket promedio",
+    "dax": "DIVIDE([Ventas totales],[Numero de pedidos])",
+    "formato": "\"S/ \"#,0.00;(\"S/ \"#,0.00);\"S/ \"0.00",
+    "explicacion": "Venta de líneas visibles por pedido visible; filtrado por categoría es ticket parcial."
+  },
+  {
+    "nombre": "Unidades vendidas",
+    "dax": "SUM(FactVentas[Cantidad])",
+    "formato": "#,0",
+    "explicacion": "Cantidad total de artículos."
+  },
+  {
+    "nombre": "Ventas anio anterior",
+    "dax": "CALCULATE([Ventas totales],SAMEPERIODLASTYEAR(DimFecha[Fecha]))",
+    "formato": "\"S/ \"#,0.00;(\"S/ \"#,0.00);\"S/ \"0.00",
+    "explicacion": "Mismo periodo calendario del año anterior. 2023 no tiene comparativo en este conjunto."
+  },
+  {
+    "nombre": "Crecimiento interanual",
+    "dax": "VAR Prev = [Ventas anio anterior] RETURN IF(NOT ISBLANK(Prev),DIVIDE([Ventas totales]-Prev,Prev))",
+    "formato": "0.00%",
+    "explicacion": "BLANK cuando no hay base comparable o su valor es cero."
+  },
+  {
+    "nombre": "Ventas YTD",
+    "dax": "TOTALYTD([Ventas totales],DimFecha[Fecha])",
+    "formato": "\"S/ \"#,0.00;(\"S/ \"#,0.00);\"S/ \"0.00",
+    "explicacion": "Acumulado hasta última fecha del contexto, reinicia en enero. Usar un año o eje AnioMes."
+  },
+  {
+    "nombre": "Ventas mes anterior",
+    "dax": "IF(HASONEVALUE(DimFecha[AnioMes]),CALCULATE([Ventas totales],DATEADD(DimFecha[Fecha],-1,MONTH)))",
+    "formato": "\"S/ \"#,0.00;(\"S/ \"#,0.00);\"S/ \"0.00",
+    "explicacion": "Disponible con un único mes en contexto; sin total multimensual."
+  },
+  {
+    "nombre": "Crecimiento mensual",
+    "dax": "VAR Prev = [Ventas mes anterior] RETURN IF(NOT ISBLANK(Prev),DIVIDE([Ventas totales]-Prev,Prev))",
+    "formato": "0.00%",
+    "explicacion": "Un único mes completo; comparar con mes completo previo. No usar slicer de días parciales."
+  },
+  {
+    "nombre": "Clientes unicos",
+    "dax": "DISTINCTCOUNT(FactVentas[ClienteID])",
+    "formato": "#,0",
+    "explicacion": "Clientes compradores en el contexto, no total del maestro."
+  },
+  {
+    "nombre": "Frecuencia de compra",
+    "dax": "DIVIDE([Numero de pedidos],[Clientes unicos])",
+    "formato": "0.00",
+    "explicacion": "Pedidos por cliente comprador del periodo visible."
+  },
+  {
+    "nombre": "Ventas por categoria",
+    "dax": "[Ventas totales]",
+    "formato": "\"S/ \"#,0.00;(\"S/ \"#,0.00);\"S/ \"0.00",
+    "explicacion": "Colocar DimProducto[Categoria] en filas/eje. La relación hace la agrupación."
+  },
+  {
+    "nombre": "Participacion producto",
+    "dax": "DIVIDE([Ventas totales],CALCULATE([Ventas totales],ALLSELECTED(DimProducto)))",
+    "formato": "0.00%",
+    "explicacion": "Porcentaje de la selección externa de productos y categorías; mantiene fecha, tienda y cliente."
+  },
+  {
+    "nombre": "Ranking productos",
+    "dax": "IF(ISINSCOPE(DimProducto[Producto]),RANKX(ALLSELECTED(DimProducto[ProductoID],DimProducto[Producto]),[Ventas totales],,DESC,Dense))",
+    "formato": "0",
+    "explicacion": "Ranking denso dentro de la categoría/filtros externos visibles. Sin ranking en totales."
+  },
+  {
+    "nombre": "Recencia RFM",
+    "dax": "VAR R = SELECTEDVALUE(DimCliente[RecenciaDias]) RETURN IF(R>=0,R)",
+    "formato": "0",
+    "explicacion": "Días desde última compra al 31/12/2025, histórico completo. -1 del archivo se muestra vacío."
+  },
+  {
+    "nombre": "Frecuencia RFM",
+    "dax": "SELECTEDVALUE(DimCliente[FrecuenciaRFM])",
+    "formato": "0",
+    "explicacion": "Pedidos de un cliente en 2023–2025, snapshot fijo."
+  },
+  {
+    "nombre": "Monetario RFM",
+    "dax": "DIVIDE(SELECTEDVALUE(DimCliente[MonetarioCent]),100)",
+    "formato": "\"S/ \"#,0.00;(\"S/ \"#,0.00);\"S/ \"0.00",
+    "explicacion": "Venta histórica de un cliente, snapshot fijo."
+  },
+  {
+    "nombre": "R score",
+    "dax": "SELECTEDVALUE(DimCliente[RScore])",
+    "formato": "0",
+    "explicacion": "1–5 por recencia, cero sin compras."
+  },
+  {
+    "nombre": "F score",
+    "dax": "SELECTEDVALUE(DimCliente[FScore])",
+    "formato": "0",
+    "explicacion": "1–5 por frecuencia, cero sin compras."
+  },
+  {
+    "nombre": "M score",
+    "dax": "SELECTEDVALUE(DimCliente[MScore])",
+    "formato": "0",
+    "explicacion": "1–5 por monetario, cero sin compras."
+  },
+  {
+    "nombre": "Segmento RFM",
+    "dax": "SELECTEDVALUE(DimCliente[SegmentoRFM])",
+    "formato": "",
+    "explicacion": "Etiqueta fija por cliente, sin etiqueta total."
+  },
+  {
+    "nombre": "Clientes segmento",
+    "dax": "COUNTROWS(DimCliente)",
+    "formato": "#,0",
+    "explicacion": "Cuenta clientes del maestro por segmento fijo, no cambia con fecha o tienda."
+  },
+  {
+    "nombre": "Venta bruta",
+    "dax": "DIVIDE(SUM(FactVentas[VentaBrutaCent]),100)",
+    "formato": "\"S/ \"#,0.00;(\"S/ \"#,0.00);\"S/ \"0.00",
+    "explicacion": "Venta antes de descuentos, sin IGV."
+  },
+  {
+    "nombre": "Descuento total",
+    "dax": "DIVIDE(SUM(FactVentas[DescuentoCent]),100)",
+    "formato": "\"S/ \"#,0.00;(\"S/ \"#,0.00);\"S/ \"0.00",
+    "explicacion": "Descuento monetario redondeado por línea."
+  },
+  {
+    "nombre": "Descuento ponderado",
+    "dax": "DIVIDE([Descuento total],[Venta bruta])",
+    "formato": "0.00%",
+    "explicacion": "Descuento efectivo ponderado por venta bruta."
+  }
+]
